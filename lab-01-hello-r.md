@@ -24,6 +24,9 @@ slant\_up 142 10 star 142 11 v\_lines 142 12 wide\_lines 142 13 x\_shape
 
 ### Exercise 2
 
+Plot y vs. x for the dino dataset. Then, calculate the correlation
+coefficient between x and y for this dataset.
+
 ``` r
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
@@ -46,20 +49,54 @@ dino_data %>%
 
 ### Exercise 3
 
-Add code and narrative as needed. Note that the R chunks are labelled
-with `plot-star` and `cor-star` to provide spaces to place the code for
-plotting and calculating the correlation coefficient. To finish, clean
-up the narrative by removing these instructions.
+Plot y vs. x for the star dataset. Then, calculate the correlation
+coefficient between x and y for this dataset.
 
-Blah blah blah…
+``` r
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
 
-I’m some text, you should replace me with more meaningful text…
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+
+![](lab-01-hello-r_files/figure-gfm/plot-star-1.png)<!-- -->
+
+``` r
+star_data %>%
+  summarize(r = cor(x, y))
+```
+
+    ## # A tibble: 1 x 1
+    ##         r
+    ##     <dbl>
+    ## 1 -0.0630
 
 ### Exercise 4
 
-Add code and narrative as needed. Note that two R chunks are given but
-they are not labeled. Use the convention from above to name them
-appropriately.
+Plot y vs. x for the circle dataset. You can (and should) reuse code we
+introduced above, just replace the dataset name with the desired
+dataset. Then, calculate the correlation coefficient between x and y for
+this dataset. How does this value compare to the r of dino?
+
+``` r
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+
+ggplot(data = circle_data, mapping = aes(x = x, y = y))+ geom_point()
+```
+
+![](lab-01-hello-r_files/figure-gfm/plot-circle-1.png)<!-- -->
+
+``` r
+circle_data %>%
+  summarize(r = cor (x,y))
+```
+
+    ## # A tibble: 1 x 1
+    ##         r
+    ##     <dbl>
+    ## 1 -0.0683
 
 ### Exercise 5
 
