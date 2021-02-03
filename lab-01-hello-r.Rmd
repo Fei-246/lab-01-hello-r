@@ -35,7 +35,7 @@ How many columns does the datasaurus_dozen file have? What are the variables inc
 13 x_shape      142
 
 ### Exercise 2
-
+Plot y vs. x for the dino dataset. Then, calculate the correlation coefficient between x and y for this dataset.
 
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
@@ -51,21 +51,19 @@ dino_data %>%
 ```
 
 ### Exercise 3
+Plot y vs. x for the star dataset. Then, calculate the correlation coefficient between x and y for this dataset.
 
-Add code and narrative as needed.
-Note that the R chunks are labelled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
-To finish, clean up the narrative by removing these instructions.
+```{r plot-star, fig.height=3, fig.width=3}
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
 
-Blah blah blah...
-
-```{r plot-star}
-
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-I'm some text, you should replace me with more meaningful text...
-
 ```{r cor-star}
-
+star_data %>%
+  summarize(r = cor(x, y))
 ```
 
 ### Exercise 4
