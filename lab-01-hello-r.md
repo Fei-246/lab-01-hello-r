@@ -24,12 +24,6 @@ slant\_up 142 10 star 142 11 v\_lines 142 12 wide\_lines 142 13 x\_shape
 
 ### Exercise 2
 
-The answers for this Exercise are given for you below. But you should
-clean up some of the narrative so that it only includes what you want to
-turn in.
-
-First let’s plot the data in the dino dataset:
-
 ``` r
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
@@ -39,8 +33,6 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
 ```
 
 ![](lab-01-hello-r_files/figure-gfm/plot-dino-1.png)<!-- -->
-
-And next calculate the correlation between `x` and `y` in this dataset:
 
 ``` r
 dino_data %>%
