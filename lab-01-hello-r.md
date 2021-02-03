@@ -1,7 +1,7 @@
 Lab 01 - Hello R
 ================
-Insert your name here
-Insert date here
+Fei Xie
+02/03/2021
 
 ## Load packages and data
 
@@ -14,7 +14,13 @@ library(datasauRus)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+How many columns does the datasaurus\_dozen file have? What are the
+variables included in the data frame?
+
+dataset n \* <chr> <int> 1 away 142 2 bullseye 142 3 circle 142 4 dino
+142 5 dots 142 6 h\_lines 142 7 high\_lines 142 8 slant\_down 142 9
+slant\_up 142 10 star 142 11 v\_lines 142 12 wide\_lines 142 13 x\_shape
+142
 
 ### Exercise 2
 
